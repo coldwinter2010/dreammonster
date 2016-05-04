@@ -9,16 +9,17 @@
         android:targetSdkVersion="21" />
 
     <application
+        android:name="com.cold.dreammonster.MainApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:name="com.cold.dreammonster.activity.LoadingActivity"
+            android:label="@string/app_name"
+           android:theme="@style/NoActionBar"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
