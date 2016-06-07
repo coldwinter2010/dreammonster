@@ -2,7 +2,9 @@ package com.cold.dreammonster.activity;
 
 import com.cold.dreammonster.BaseActivity;
 import com.cold.dreammonster.R;
+import com.cold.dreammonster.utils.SettingUtils;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,10 +32,29 @@ public class LoadingActivity extends BaseActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_loading);
-		
+		mHandler.postDelayed(new Runnable(){
+			@Override
+			public void run() {
+				goNext();
+				
+			}
+			
+		}, 2000);
 		
 	}
 	
+	
+	private void goNext(){
+		Intent it=new Intent();
+		if(SettingUtils.getFirstUsing(this)){
+			it.setClass(this, GuideActivity.class);
+		}else{
+			//TODO goto main
+			it.setClass(this, MainActivity.class);
+		}
+		startActivity(it);
+		finish();
+	}
 	
 	
 	private Handler mHandler=new Handler();
