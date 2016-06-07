@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:id="@+id/alarmset_activity"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true" >
+    
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#e6e3f8" >
+
+        <TextView 
+            android:id="@+id/alarmset_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:typeface="sans"
+            android:text="取消"
+            android:textColor="#02A3FF"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="设置闹钟"
+            android:textColor="#333333"
+            android:typeface="sans"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="#02A3FF"
+            android:typeface="sans"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/alarmset_weeklayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5130cb"
+        android:paddingTop="6dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="8dp"
+        android:stretchColumns="*"
+       
+        android:gravity="center" >
+        <TableRow>
+        <Button 
+            android:id="@+id/alarmset_monday"
+            android:layout_marginLeft="8dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:text="一"
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:gravity="center" 
+            android:background="@drawable/week_bg"
+          
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_tuesday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="二"
+            android:textColor="#ffffff"
+             android:gravity="center" 
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_wednesday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="三"
+            android:textColor="#ffffff"
+             android:gravity="center" 
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_thursday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="四"
+            android:textColor="#ffffff"
+             android:gravity="center" 
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_friday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="五"
+            android:textColor="#ffffff"
+             android:gravity="center" 
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_saturday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="六"
+             android:gravity="center" 
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+            android:layout_marginRight="4dp"
+            />
+        <Button 
+            android:id="@+id/alarmset_sunday"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:text="七"
+             android:gravity="center" 
+            android:textColor="#ffffff"
+            android:textSize="14sp"
+            android:background="@drawable/week_bg"
+             android:layout_marginRight="8dp"
+            />
+         </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+          android:id="@+id/alarmset_repeatlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5330cc" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:typeface="sans"
+            android:text="每周重复"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/alarmset_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmset_divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="#5330cc" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/alarmset_alarmonlayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5330cc" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:typeface="sans"
+            android:text="闹钟开启"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+
+       <!--  <ToggleButton
+            android:id="@+id/alarmset_alarmon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="14dp"
+            android:background="@android:color/transparent"
+            android:button="@drawable/switch_btn"
+            android:checked="true"
+            android:gravity="center"
+            android:text=""
+            android:textOff=""
+            android:textOn="" /> -->
+ 
+        <!--By wqg 
+        
+        <com.cmm.littledreammonster.customizeswitch.SwitchButton
+        android:id="@+id/alarmset_alarmon"
+        style="@style/SwitchButtonStyle"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginRight="14dp" />
+         -->
+        
+ 
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmset_divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="#5330cc" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/alarmset_belllayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5330cc" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:typeface="sans"
+            android:text="闹钟铃声"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/alarmset_bell"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="默认铃声"
+            android:textColor="#01A1F9"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/alarmset_divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="#5330cc" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5330cc" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="标  签"
+            android:typeface="sans"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+
+        <LinearLayout
+        android:focusable="true" 
+        android:focusableInTouchMode="true"
+        android:layout_width="0px" 
+        android:layout_height="0px"/>
+        <EditText
+            android:id="@+id/alarmset_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:text="一定要早睡"
+            android:textColor="#01A1F9"
+            android:textSize="14sp" />
+        
+        <ImageView 
+            android:id="@+id/alarmset_type"
+            android:layout_toLeftOf="@id/alarmset_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/alarmset_pink"
+             android:layout_margin="6dp"
+             android:layout_marginRight="5dp"
+            />
+    </RelativeLayout>
+    
+   <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/alarmset_divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#e0ffffff"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="match_parent"
+            android:background="#5330cc" />
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/alarmset_sleeplayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#5330cc"
+        android:visibility="gone"
+       >
+       
+         
+        <LinearLayout 
+            android:id="@+id/alarmset_zaoqilayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/circleangle_bg"
+  
+            >
+         
+              <ImageView
+             android:layout_margin="4dp"
+          
+            android:id="@+id/alarmset_wakeup"
+            android:src="@drawable/alarmset_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+             />
+         
+          <TextView
+            android:id="@+id/zaoqi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+             android:gravity="center"
+            android:text="早起闹钟"
+            android:layout_marginRight="10dp"
+            android:typeface="sans"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+        
+        
+
+        </LinearLayout>
+        
+         <LinearLayout 
+             android:id="@+id/alarmset_zaoshuilayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/circleangle_bg"
+            android:orientation="horizontal"
+            android:layout_toLeftOf="@id/alarmset_zaoqilayout"
+            >
+        <ImageView
+
+             android:layout_margin="4dp"
+            android:id="@+id/alarmset_sleep"
+            android:src="@drawable/alarmset_pink"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+         <TextView
+            android:id="@+id/zaoshui"
+            
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="早睡闹钟"
+            android:textColor="#b3e7ea"
+            android:textSize="14sp" />
+
+         </LinearLayout>
+
+     
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/table4"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:background="#3F55AA"
+        android:gravity="center"
+       
+        android:stretchColumns="0,2"
+         >
+
+        <TableRow>
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/hour"
+                android:layout_width="4dip"
+                android:layout_height="wrap_content"
+                 >
+            </kankan.wheel.widget.WheelView>
+
+             <kankan.wheel.widget.WheelView
+                android:id="@+id/maohao"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" >
+            </kankan.wheel.widget.WheelView>
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/minute"
+                android:layout_width="4dip"
+                android:layout_height="wrap_content" >
+            </kankan.wheel.widget.WheelView>
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#3F55AA" 
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/alarmset_delete"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            
+            android:background="@drawable/circleangle_red"
+            android:text="删除该闹钟"
+            android:textColor="#ffffff"
+            android:textSize="18sp" 
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

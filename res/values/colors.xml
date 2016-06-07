@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main">#63C3FF</color>
+    <color name="actionbar_title_color">@android:color/white</color>
+    <color name="detail_bg_color">#66cc66</color>
+    <color name="guide_bg_color">#0000cc</color>
+     <color name="province_line_border">#C7C7C7</color>
+    <color name="background">#3F55AA</color>
+    
+    <color name="floralwhite">#FFFAF0</color>
+    <color name="dimgrey">#E22F2F</color>
+     <color name="gray">#E84A40</color>
+    <!-- 灰色 -->
+</resources>
