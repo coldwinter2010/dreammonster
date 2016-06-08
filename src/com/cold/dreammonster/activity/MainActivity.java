@@ -14,6 +14,7 @@ import com.cold.dreammonster.customview.SmallClockView;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
@@ -30,11 +31,14 @@ public class MainActivity extends Activity {
 		mClockView=(ClockView)findViewById(R.id.clockView);
 		scContainer=(SmallClockContainer)findViewById(R.id.sc_container);
 		initSmallClock();
+		
+		// TODO fortext
+		Log.i("MainActivity.onCreate", "æµ‹è¯•GitHubåŒæ­¥   By LC");
 	}
 
 	
 	private void initSmallClock() {
-		//TODO ²éÕÒÊı¾İ¿â£¬¼ÓÔØÄÖÁåĞÅÏ¢
+		//TODO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		SmallClockInfo info=new SmallClockInfo(11, 40, 1, 1, 0, "ff", 0, "");
 		 ImageView mIcon = new ImageView(this);
 	        mIcon.setImageResource(R.drawable.ic_launcher);
